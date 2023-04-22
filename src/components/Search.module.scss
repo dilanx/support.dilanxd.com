@@ -1,0 +1,28 @@
+.search {
+  margin: 16px 0;
+
+  input {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 8px 16px;
+    border: 2px solid #f0f0ff;
+    background-color: #f9f9ff;
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+    font-family: 'Nunito';
+    font-weight: 600;
+
+    &:hover {
+      border-color: #e0e0ff;
+    }
+
+    &:focus {
+      border-color: #000000;
+    }
+
+    cursor: not-allowed;
+  }
+}

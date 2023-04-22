@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'Nunito';
+  src: url('/static/fonts/Nunito.ttf');
+  font-style: normal;
+}
+
+:root {
+  --ifm-color-primary: #d22255;
+  --ifm-color-primary-dark: #bd1f4c;
+  --ifm-color-primary-darker: #b21d48;
+  --ifm-color-primary-darkest: #93183b;
+  --ifm-color-primary-light: #dd2f62;
+  --ifm-color-primary-lighter: #df3a6a;
+  --ifm-color-primary-lightest: #e45981;
+
+  --ifm-heading-font-family: 'Nunito', sans-serif;
+
+  font-family: 'Nunito', sans-serif;
+
+  --ifm-code-font-size: 80%;
+
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}

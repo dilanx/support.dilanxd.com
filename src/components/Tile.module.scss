@@ -1,0 +1,62 @@
+.tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 8px;
+  padding: 32px;
+  border-radius: 8px;
+  width: 180px;
+  height: 220px;
+  color: #000000;
+
+  &:hover {
+    text-decoration: none;
+    color: #000000;
+    background-color: #f0f0f0;
+  }
+
+  &:active {
+    background-color: #e0e0e0;
+  }
+
+  img {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .icon {
+    width: 116px;
+    height: 116px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #646464;
+    border-radius: 16px;
+    color: #ffffff;
+
+    font-size: 32px;
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .tile {
+    width: 140px;
+    height: 180px;
+
+    .icon {
+      width: 76px;
+      height: 76px;
+    }
+  }
+  .tile h3 {
+    font-size: 20px;
+  }
+}

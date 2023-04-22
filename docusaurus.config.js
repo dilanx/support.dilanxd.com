@@ -5,8 +5,6 @@ const { faUsers } = require('@fortawesome/free-solid-svg-icons');
 
 const title = "Dilan's Knowledge Base";
 const tagline = 'Find answers here.';
-// const description =
-//   'Find answers to any questions you have related to my software!';
 
 const categories = [
   {

@@ -1,17 +1,62 @@
 @font-face {
   font-family: 'Nunito';
-  src: url('/static/fonts/Nunito.ttf');
-  font-style: normal;
+  src: url('/static/fonts/Nunito-ExtraLight.ttf');
+  font-weight: 200;
+}
+@font-face {
+  font-family: 'Nunito';
+  src: url('/static/fonts/Nunito-Light.ttf');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Nunito';
+  src: url('/static/fonts/Nunito-Regular.ttf');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Nunito';
+  src: url('/static/fonts/Nunito-Medium.ttf');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Nunito';
+  src: url('/static/fonts/Nunito-SemiBold.ttf');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Nunito';
+  src: url('/static/fonts/Nunito-Bold.ttf');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Nunito';
+  src: url('/static/fonts/Nunito-ExtraBold.ttf');
+  font-weight: 800;
+}
+@font-face {
+  font-family: 'Nunito';
+  src: url('/static/fonts/Nunito-Black.ttf');
+  font-weight: 900;
+}
+@font-face {
+  font-family: 'Roboto Mono';
+  src: url('/static/fonts/RobotoMono-Regular.ttf');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Roboto Mono';
+  src: url('/static/fonts/RobotoMono-Medium.ttf');
+  font-weight: 500;
 }
 
 :root {
-  --ifm-color-primary: #d22255;
-  --ifm-color-primary-dark: #bd1f4c;
-  --ifm-color-primary-darker: #b21d48;
-  --ifm-color-primary-darkest: #93183b;
-  --ifm-color-primary-light: #dd2f62;
-  --ifm-color-primary-lighter: #df3a6a;
-  --ifm-color-primary-lightest: #e45981;
+  --ifm-color-primary: #2563eb;
+  --ifm-color-primary-dark: #1554e0;
+  --ifm-color-primary-darker: #1350d4;
+  --ifm-color-primary-darkest: #1042ae;
+  --ifm-color-primary-light: #3e75ed;
+  --ifm-color-primary-lighter: #4a7eee;
+  --ifm-color-primary-lightest: #7098f2;
 
   --ifm-heading-font-family: 'Nunito', sans-serif;
 

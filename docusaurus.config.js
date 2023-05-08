@@ -11,9 +11,9 @@ const categories = [
     label: 'Services',
     items: [
       {
-        label: 'Accounts',
+        label: 'Account',
         icon: faUsers,
-        to: '/accounts',
+        to: '/account',
       },
     ],
   },

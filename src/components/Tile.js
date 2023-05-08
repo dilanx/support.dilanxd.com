@@ -3,13 +3,13 @@ import styles from './Tile.module.scss';
 import Link from '@docusaurus/Link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-export default function Tile({ label, image, icon, to, href, newTab = false }) {
+export default function Tile({ label, image, icon, to, href }) {
   return (
     <Link
       className={styles.tile}
       href={to || href}
-      target={newTab ? '_blank' : '_self'}
-      rel={newTab ? 'noreferrer' : undefined}
+      target={href ? '_blank' : '_self'}
+      rel={href ? 'noreferrer' : undefined}
     >
       {icon && (
         <div className={styles.icon}>

@@ -1,0 +1,74 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 16px auto;
+  background-color: #f0f0f0;
+  max-width: 640px;
+  padding: 8px 16px;
+  gap: 8px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.icon {
+  font-size: 32px;
+  margin: 8px 0;
+  color: #f87171;
+}
+
+.text {
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+  font-size: 14px;
+}
+
+.error {
+  background-color: #fafafa;
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.errorText {
+  margin: 0;
+  font-family: Roboto Mono;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.taskbar {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+}
+
+.copied {
+  margin: 0;
+  font-size: 14px;
+}
+
+.button {
+  border: none;
+  background-color: #ffffff;
+  font-family: Nunito;
+  padding: 4px 8px;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  transition: all 100ms ease-in-out;
+
+  &:hover {
+    background-color: #f4f4f4;
+  }
+
+  &:active {
+    box-shadow: none;
+    transform: translateY(1px);
+  }
+}

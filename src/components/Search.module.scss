@@ -1,11 +1,13 @@
 .search {
-  margin: 16px 0;
+  width: 100%;
+  max-width: 400px;
+  margin: 16px auto;
+  position: relative;
 
   input {
     display: block;
-    width: 100%;
-    max-width: 400px;
     margin: 0 auto;
+    width: 100%;
     padding: 8px 16px;
     border: 2px solid #f0f0ff;
     background-color: #f9f9ff;
@@ -14,6 +16,7 @@
     font-size: 16px;
     font-family: 'Nunito';
     font-weight: 600;
+    padding-left: 40px;
 
     &:hover {
       border-color: #e0e0ff;
@@ -24,5 +27,15 @@
     }
 
     cursor: not-allowed;
+  }
+
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    z-index: 9;
+    font-size: 20px;
+    color: #a0a0ff;
   }
 }

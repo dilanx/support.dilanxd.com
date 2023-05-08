@@ -6,7 +6,7 @@ import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 
 export default function ErrorBox() {
   const [error, setError] = React.useState(null);
-  const [copied, setCopied] = React.useState(true);
+  const [copied, setCopied] = React.useState(false);
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const error = params.get('e');

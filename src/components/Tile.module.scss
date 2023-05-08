@@ -10,6 +10,7 @@
   width: 180px;
   height: 220px;
   color: #000000;
+  position: relative;
 
   &:hover {
     text-decoration: none;
@@ -43,6 +44,14 @@
   h3 {
     margin: 0;
     font-size: 24px;
+  }
+
+  .ext {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 20px;
+    color: #a0a0a0;
   }
 }
 

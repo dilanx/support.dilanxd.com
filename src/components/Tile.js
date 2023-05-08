@@ -1,7 +1,8 @@
+import Link from '@docusaurus/Link';
+import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import styles from './Tile.module.scss';
-import Link from '@docusaurus/Link';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Tile({ label, image, icon, to, href }) {
   return (
@@ -18,6 +19,9 @@ export default function Tile({ label, image, icon, to, href }) {
       )}
       {image && <img src={image} alt={label} />}
       <h3>{label}</h3>
+      {href && (
+        <FontAwesomeIcon icon={faUpRightFromSquare} className={styles.ext} />
+      )}
     </Link>
   );
 }

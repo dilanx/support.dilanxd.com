@@ -1,5 +1,6 @@
 ---
-slug: /pa100
+pagination_prev: paper/index
+pagination_next: paper/plans-getting-started
 ---
 
 # Paper FAQ

@@ -18,21 +18,17 @@ Help Center for [paper.nu](https://www.paper.nu)
   - [My plan or schedule is gone. What happened?](./faq.md#my-plan-or-schedule-is-gone-what-happened)
   - [How do I share or export my plan or schedule?](./faq.md#how-do-i-share-or-export-my-plan-or-schedule)
 
+## Features
+
+- [Getting started with **Plans**](./getting-started-with-plans.md)
+- [Getting started with **Schedules**](./getting-started-with-schedules.md)
+- [Using **Search** to the fullest](./search.md)
+- [Finding your courses with the **Map**](./map.md)
+- [Saving courses for later with **Bookmarks**](./bookmarks.md)
+- [Adding custom text with **Notes**](./notes.md)
+- [**Sharing** your plans and schedules](./share.md)
+- [Using **schedules across terms**](./schedules-across-terms.md)
+
 ## Troubleshooting
 
 - [Troubleshooting Paper](./troubleshooting.mdx)
-
-## Plan
-
-- [Getting started with plans on Paper](./plans-getting-started.md)
-- [Advanced searching](./plans-search.md)
-- [Bookmarking courses](./plans-bookmarks.md)
-- [Sharing plans](./plans-share.md)
-
-## Schedule
-
-_Coming soon._
-
-## General Features
-
-- [Notes](./notes.md)

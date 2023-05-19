@@ -1,6 +1,6 @@
 # Discontinuing the URL Save Data System
 
-Starting **May 12 2023**, Paper will no longer support the URL save data system that has existed since launch.
+Starting **May 26 2023**, Paper will no longer support the URL save data system that has existed since launch.
 
 ![Discontinuing URL save data system](/img/paper/discontinuing-url-save-1.png)
 

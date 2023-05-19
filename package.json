@@ -16,8 +16,8 @@
   },
   "dependencies": {
     "@dilanx/themes": "^2.0.1",
-    "@docusaurus/core": "2.4.0",
-    "@docusaurus/preset-classic": "2.4.0",
+    "@docusaurus/core": "^2.4.1",
+    "@docusaurus/preset-classic": "^2.4.1",
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "@dilanx/config": "^1.1.2",
-    "@docusaurus/module-type-aliases": "2.4.0",
+    "@docusaurus/module-type-aliases": "^2.4.1",
     "prettier": "^2.8.7"
   },
   "browserslist": {

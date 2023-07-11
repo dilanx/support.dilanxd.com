@@ -3,7 +3,7 @@ pagination_prev: paper/index
 pagination_next: paper/getting-started-with-plans
 ---
 
-# Leaving feedback for Paper
+# Leaving feedback about Paper
 
 Have any cool ideas or features you'd like to see? Let us know!
 

@@ -35,4 +35,4 @@ Help Center for [paper.nu](https://www.paper.nu)
 
 ## Feedback
 
-- [Leaving feedback for Paper](./feedback.md)
+- [Leaving feedback about Paper](./feedback.md)

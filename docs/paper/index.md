@@ -32,3 +32,7 @@ Help Center for [paper.nu](https://www.paper.nu)
 ## Troubleshooting
 
 - [Troubleshooting Paper](./troubleshooting.mdx)
+
+## Feedback
+
+- [Leaving feedback for Paper](./feedback.md)

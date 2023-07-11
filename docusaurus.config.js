@@ -69,7 +69,7 @@ const config = {
         docs: {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/dilanx/kb.dilanxd.com',
+          editUrl: 'https://github.com/dilanx/kb.dilanxd.com/blob/main',
         },
         blog: false,
         theme: {

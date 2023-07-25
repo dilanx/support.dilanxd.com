@@ -36,3 +36,14 @@ Help Center for [paper.nu](https://www.paper.nu)
 ## Feedback
 
 - [Leaving feedback about Paper](./feedback.md)
+
+## Develop
+
+- [**Developing with Paper**](./develop/index.md)
+  - [Using User Data](./develop/user-data.md)
+  - [Using Course Data](./develop/course-data.md)
+  - [API Reference](./develop/api-reference.mdx)
+
+## Contribute
+
+- [Contributing to Paper](./contribute.md)

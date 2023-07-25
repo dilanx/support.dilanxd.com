@@ -1,0 +1,273 @@
+---
+pagination_prev: paper/develop/course-data
+pagination_next: null
+---
+
+import Endpoint from '@site/src/components/endpoint';
+
+# Paper API Reference
+
+:::info important prerequisite
+
+In order to access a user's data in Paper, the user must authenticate with the auth.dilanxd.com account service and authorize your application to make requests on their behalf.
+
+This Paper API guide assumes you have already done this and have an **access token** for the user. If not, you'll need to set that up first.
+
+**[Get started with authentication](../../developer/index.md)**
+
+:::
+
+## API Reference
+
+### Get all plans or schedules
+
+<Endpoint
+  method="GET"
+  endpoint="/paper/documents"
+  description="Get all plans or schedules"
+  servers={['https://api.dilanxd.com']}
+  authorization="Bearer {access token}"
+  scope="plan-nu"
+  query={[
+    {
+      id: 'type',
+      description: '1 for plans, 2 for schedules. (default: 2)',
+    },
+  ]}
+  responses={[
+    {
+      status: 200,
+      description: 'Operation successful',
+      params: [
+        {
+          id: 'documents',
+          description: 'A list of document objects.',
+          required: true,
+          type: 'Document[]',
+        },
+      ],
+      contentType: 'application/json',
+    },
+    {
+      status: 400,
+      description: 'Invalid or missing parameters',
+    },
+    {
+      status: 401,
+      description: 'Invalid or missing access token',
+    },
+  ]}
+/>
+
+### Create a plan or schedule
+
+<Endpoint
+  method="POST"
+  endpoint="/paper/documents"
+  description="Create a plan or schedule"
+  servers={['https://api.dilanxd.com']}
+  authorization="Bearer {access token}"
+  scope="plan-nu plan-nu:write"
+  body={[
+    {
+      id: 'type',
+      description: '1 for plans, 2 for schedules. (default: 2)',
+      required: true,
+      type: '1 | 2',
+    },
+    {
+      id: 'name',
+      description: 'The name of the document.',
+      required: true,
+      type: 'string (match ^[\\w\\-\\s]{1,24}$)',
+    },
+    {
+      id: 'content',
+      description: 'The serialized data string of the document.',
+      required: false,
+      type: 'string (match ^[\\w\\-%&=,;]+$)',
+    },
+    {
+      id: 'notes',
+      description: 'The notes for the document.',
+      required: false,
+      type: 'string (max len 2000)',
+    },
+    {
+      id: 'custom',
+      description: 'Custom course sections.',
+      required: false,
+      type: 'CustomCourseSection[]',
+    },
+  ]}
+  contentType="application/json"
+  responses={[
+    {
+      status: 201,
+      description: 'Operation successful',
+      params: [
+        {
+          id: 'success',
+          required: true,
+          type: 'true',
+        },
+        {
+          id: 'document',
+          description: 'The document that was created.',
+          required: true,
+          type: 'Document',
+        },
+      ],
+      contentType: 'application/json',
+    },
+    {
+      status: 400,
+      description: 'Invalid or missing parameters',
+    },
+    {
+      status: 401,
+      description: 'Invalid or missing access token',
+    },
+    {
+      status: 403,
+      description: 'Document limit reached for given type',
+    },
+  ]}
+/>
+
+### Update a plan or schedule
+
+<Endpoint
+  method="PATCH"
+  endpoint="/paper/documents/{documentId}"
+  description="Update a plan or schedule"
+  servers={['https://api.dilanxd.com']}
+  authorization="Bearer {access token}"
+  scope="plan-nu plan-nu:write"
+  params={[
+    {
+      id: 'documentId',
+      description: 'The ID of the document to update.',
+      required: true,
+    },
+  ]}
+  body={[
+    {
+      id: 'name',
+      description: 'The name of the document.',
+      required: false,
+      type: 'string (match ^[\\w\\-\\s]{1,24}$)',
+    },
+    {
+      id: 'content',
+      description: 'The serialized data string of the document.',
+      required: false,
+      type: 'string (match ^[\\w\\-%&=,;]+$)',
+    },
+    {
+      id: 'notes',
+      description: 'The notes for the document.',
+      required: false,
+      type: 'string (max len 2000)',
+    },
+    {
+      id: 'custom',
+      description: 'Custom course sections.',
+      required: false,
+      type: 'CustomCourseSection[]',
+    },
+  ]}
+  contentType="application/json"
+  responses={[
+    {
+      status: 200,
+      description: 'Operation successful',
+      params: [
+        {
+          id: 'success',
+          required: true,
+          type: 'true',
+        },
+        {
+          id: 'document',
+          description: 'The document that was updated, after the update.',
+          required: true,
+          type: 'Document',
+        },
+      ],
+      contentType: 'application/json',
+    },
+    {
+      status: 400,
+      description: 'Invalid or missing parameters',
+    },
+    {
+      status: 401,
+      description: 'Invalid or missing access token',
+    },
+    {
+      status: 404,
+      description: 'Document for user not found',
+    },
+  ]}
+/>
+
+### Delete a plan or schedule
+
+<Endpoint
+  method="DELETE"
+  endpoint="/paper/documents/{documentId}"
+  description="Delete a plan or schedule"
+  servers={['https://api.dilanxd.com']}
+  authorization="Bearer {access token}"
+  scope="plan-nu plan-nu:write"
+  params={[
+    {
+      id: 'documentId',
+      description: 'The ID of the document to delete.',
+      required: true,
+    },
+  ]}
+  responses={[
+    {
+      status: 200,
+      description: 'Operation successful',
+      params: [
+        {
+          id: 'success',
+          required: true,
+          type: 'true',
+        },
+        {
+          id: 'id',
+          description: 'The ID of the document that was deleted.',
+          required: true,
+          type: 'string',
+        },
+      ],
+      contentType: 'application/json',
+    },
+    {
+      status: 401,
+      description: 'Invalid or missing access token',
+    },
+    {
+      status: 404,
+      description: 'Document for user not found',
+    },
+  ]}
+/>
+
+## Type Reference
+
+### Document
+
+| Key           | Type   | Description                                                                                 |
+| ------------- | ------ | ------------------------------------------------------------------------------------------- |
+| `id`          | string | The document's unique ID                                                                    |
+| `type`        | 1 \| 2 | 1 if plan, 2 if schedule                                                                    |
+| `name`        | string | The name of the document                                                                    |
+| `owner`       | string | The user ID of the document's owner                                                         |
+| `content`     | string | The [serialized data string](./user-data.md#document-content-serialization) of the document |
+| `createdAt`   | number | The creation timestamp in millis since epoch                                                |
+| `lastUpdated` | number | The last update timestamp in millis since epoch                                             |

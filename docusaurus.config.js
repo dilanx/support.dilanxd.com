@@ -1,7 +1,7 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const { faUsers } = require('@fortawesome/free-solid-svg-icons');
+const { faUsers, faCode } = require('@fortawesome/free-solid-svg-icons');
 
 const title = "Dilan's Knowledge Base";
 const tagline = 'Find answers here.';
@@ -14,6 +14,11 @@ const categories = [
         label: 'Account',
         icon: faUsers,
         to: '/account',
+      },
+      {
+        label: 'Developer',
+        icon: faCode,
+        to: '/developer',
       },
     ],
   },

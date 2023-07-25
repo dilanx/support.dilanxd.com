@@ -15,7 +15,7 @@ Sometimes, you need to attach some extra text to your plans and schedules. You c
 
 - Notes can only be added to plans and schedules that are linked to your account. Make sure to have one [activated](./getting-started-with-plans.md#creating-a-plan) (it won't let you write notes if you don't).
 - Notes are **not** saved automatically. When there are unsaved changes, a green **Save** button will appear. Make sure to press it to save your notes!
-- Notes are not included in the [shared plan link](./plans-share.md).
+- Notes are not included in the [shared plan link](./share.md).
 
 :::
 

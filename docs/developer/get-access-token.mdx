@@ -1,0 +1,91 @@
+---
+pagination_prev: developer/create-app
+pagination_next: null
+---
+
+import Endpoint from '@site/src/components/endpoint';
+
+# Get an Access Token
+
+This process is largly structured based on the [OAuth 2.0](https://oauth.net/2/) specification. There are some things missing but I hope to make it completely compliant in the future.
+
+## 1. Get an authorization code
+
+Once you have created an app, you'll need to **REDIRECT** them to the **authorization endpoint** to get an **authorization code**. The endpoint is called authenticate but ignore that lol it's for authenticating the user and also authorizing your app on their behalf. Keep in mind that this is `https://auth.dilanxd.com`.
+
+<Endpoint
+  method="GO TO"
+  endpoint="/authenticate"
+  servers={['https://auth.dilanxd.com']}
+  query={[
+    {
+      id: 'client_id',
+      description: 'Your 12-digit client ID.',
+      required: true,
+    },
+    {
+      id: 'redirect_uri',
+      description:
+        'A URL with an approved domain to redirect the user after authorization.',
+      required: true,
+    },
+    {
+      id: 'state',
+      description:
+        'A random string to prevent CSRF attacks. Ensure that you check this when the user is redirected back to your app.',
+      required: true,
+    },
+  ]}
+/>
+
+You'll then be redirected back to your application at the endpoint you specified in the `redirect_uri` query parameter. This URL will contain a `state` query parameter, which you should verify, and a `code` query paramter, which you should **immediately** exchange for an access token since authorization codes expire quickly.
+
+## 2. Exchange code for token
+
+Once you've verified `state`, use the `code` to get an access token by making the following API request. Keep in mind that this is `https://api.dilanxd.com`.
+
+<Endpoint
+  method="POST"
+  endpoint="/auth/token"
+  servers={['https://api.dilanxd.com']}
+  body={[
+    {
+      id: 'client_id',
+      description: 'Your 12-digit client ID.',
+      required: true,
+    },
+    {
+      id: 'code',
+      description: 'The authorization code.',
+      required: true,
+    },
+  ]}
+  contentType="application/json"
+  responses={[
+    {
+      status: 200,
+      description: 'Operation successful',
+      params: [
+        {
+          id: 'access_token',
+          description: 'The access token.',
+          required: true,
+          type: 'string',
+        },
+      ],
+      contentType: 'application/json',
+    },
+    {
+      status: 400,
+      description: 'Invalid or missing parameters',
+    },
+  ]}
+/>
+
+## 3. Use the access token
+
+Now, you can make requests to the API using the access token. Just pass it in the `Authorization` header as a bearer token when necessary.
+
+```
+Authorization: Bearer <access_token>
+```

@@ -1,5 +1,5 @@
 {
-  "name": "dilanx-kb",
+  "name": "dilanx-support",
   "version": "0.0.0",
   "private": true,
   "prettier": "@dilanx/config/prettier",

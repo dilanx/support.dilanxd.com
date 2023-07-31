@@ -3,7 +3,7 @@
 
 const { faUsers, faCode } = require('@fortawesome/free-solid-svg-icons');
 
-const title = "Dilan's Knowledge Base";
+const title = "Dilan's Help Center";
 const tagline = 'Find answers here.';
 
 const categories = [
@@ -43,7 +43,7 @@ const categories = [
 const config = {
   title,
   tagline,
-  url: 'https://kb.dilanxd.com',
+  url: 'https://support.dilanxd.com',
   baseUrl: '/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
@@ -52,7 +52,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'dilanx', // Usually your GitHub org/user name.
-  projectName: 'kb.dilanxd.com', // Usually your repo name.
+  projectName: 'support.dilanxd.com', // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -74,7 +74,7 @@ const config = {
         docs: {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/dilanx/kb.dilanxd.com/blob/main',
+          editUrl: 'https://github.com/dilanx/support.dilanxd.com/blob/main',
         },
         blog: false,
         theme: {
@@ -95,7 +95,7 @@ const config = {
         disableSwitch: true,
       },
       navbar: {
-        title: 'Knowledge Base',
+        title: 'Help Center',
         logo: {
           alt: 'Dilan Nair Logo',
           src: 'img/logo.svg',

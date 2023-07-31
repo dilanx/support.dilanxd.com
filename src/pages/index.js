@@ -19,7 +19,7 @@ export default function Home() {
     >
       <main className={styles.main}>
         <div className={styles.heading}>
-          <p>kb.dilanxd.com</p>
+          <p>support.dilanxd.com</p>
           <h1>Find answers here.</h1>
         </div>
 

@@ -1,3 +1,3 @@
-# kb.dilanxd.com
+# support.dilanxd.com
 
-https://kb.dilanxd.com
+https://support.dilanxd.com

@@ -53,6 +53,8 @@ All source code lives within `src`.
 - `SaveDataManager.ts` handles loading and saving user data.
 - `Account.ts` handles retrieving and updating plan and schedule data saved to an account.
 
+The latest code is on the [`dev`](https://github.com/dilanx/paper.nu/tree/dev) branch, so I recommend working on your own branch built from that one. The [`main`](https://github.com/dilanx/paper.nu/tree/main) branch is auto-deployed to production, so it has the code that's currently live at [paper.nu](https://www.paper.nu).
+
 ## Getting started
 
 You'll need to make sure you have JavaScript tooling installed like Node.js (including npm). I recommend installing using [nvm](https://github.com/nvm-sh/nvm) if you don't already have it. I use Node 18 when working with this project. You'll also need a good code editor, like [Visual Studio Code](https://code.visualstudio.com/).

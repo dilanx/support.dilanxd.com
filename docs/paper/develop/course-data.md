@@ -27,7 +27,9 @@ The following are the keys of the root object of the plan data file.
 | `courses`   | courses   | [PlanCourse](#plancourse)[]               |
 | `legacy`    | legacy    | [PlanCourse](#plancourse)[]               |
 | `majors`    | subjects  | {string _to_ [PlanSubject](#plansubject)} |
-| `major_ids` | major ids | {string _to_ string}                      |
+| `major_ids` | major ids | {string _to_ string}\*                    |
+
+_\* This property will be removed in **Paper v3**._
 
 ## Schedule data
 
@@ -52,11 +54,13 @@ Many properties in these types will not always exist. I highly recommend null ch
 
 ### PlanSubject
 
-| Short | Long    | Type   |
-| ----- | ------- | ------ |
-| `i`   | id      | string |
-| `c`   | color   | string |
-| `d`   | display | string |
+| Short | Long    | Type     |
+| ----- | ------- | -------- |
+| `i`   | id      | string\* |
+| `c`   | color   | string   |
+| `d`   | display | string   |
+
+_\* This property will be removed in **Paper v3**._
 
 ### ScheduleCourse
 

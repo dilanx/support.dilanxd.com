@@ -55,7 +55,7 @@ All source code lives within `src`.
 
 ## Getting started
 
-You'll need to make sure you have JavaScript tooling installed like Node.js (including npm). I recommend installing using [nvm](https://github.com/nvm-sh/nvm) if you don't already have it. I use Node 18 when working with this project.
+You'll need to make sure you have JavaScript tooling installed like Node.js (including npm). I recommend installing using [nvm](https://github.com/nvm-sh/nvm) if you don't already have it. I use Node 18 when working with this project. You'll also need a good code editor, like [Visual Studio Code](https://code.visualstudio.com/).
 
 1. Fork the [paper.nu GitHub repository](https://github.com/dilanx/paper.nu), then clone your generated repository.
 

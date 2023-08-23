@@ -1,6 +1,6 @@
 ---
 pagination_prev: paper/share
-pagination_next: null
+pagination_next: paper/mobile
 ---
 
 # Schedules Across Terms

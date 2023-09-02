@@ -9,6 +9,10 @@ You can view a live feed of today's dining hall menus in **#menu**.
 
 Discord loads a lot faster than the Dine On Campus menus, so you might find this useful.
 
+View the full menu at https://dineoncampus.com/northwestern/whats-on-the-menu.
+
+View the data collection source code at https://github.com/stevenewald/dineoncampus-faster.
+
 ## Access the menus from your phone's home screen
 
 Did you know you can create a shortcut to the menus right from your home screen? These instructions are for iOS using the official [**Shortcuts**](https://apps.apple.com/us/app/shortcuts/id915249334) app.

@@ -75,8 +75,9 @@ Applicants and prospective students can use the **#applicants** forum channel to
 
 ## Getting help
 
-Server administrators and moderators are here to help! Feel free to message anyone with the **Administrator** or **Moderator** roles if you need help with anything at all.
+Server administrators and moderators are here to help! There are a lot of ways to get in touch:
 
-If the issue is related to an ongoing conversation or messages in a channel, you can ping **`@Moderator`** in the chat.
-
-You can also send an email to the official email address of the server, [**discord@u.northwestern.edu**](mailto:discord@u.northwestern.edu).
+- Use the **Contact a moderator** button in the **#welcome** channel and enter your message (recommended for anything, fastest response from any available moderator)
+- Message anyone with the **Administrator** or **Moderator** roles
+- Ping **`@Moderator`** in the chat (good when the issue is related to an ongoing conversation or messages in a channel)
+- Send an email to the official email address of the server, [**discord@u.northwestern.edu**](mailto:discord@u.northwestern.edu)

@@ -5,15 +5,15 @@ pagination_next: paper/develop/course-data
 
 # Using User Data
 
-## Using the API
-
-Refer to the **[API Reference](./api-reference.mdx)** for the things you can do with the Paper API.
-
 :::caution Full data format shift coming in v3.0
 
 In the upcoming **Paper version 3**, user data is no longer structured in the way outlined on this page. The new structure is completely different but more intuitive and easy to work with, as it's structured as a JSON object rather than a URL query params string. This is possible because of the [removal of the URL save data system](https://dilan.blog/discontinuing-the-paper-url-save-data-system). It's strongly recommended that if you're planning on developing with Paper, you should wait until version 3 and its documentation is released.
 
 :::
+
+## Using the API
+
+Refer to the **[API Reference](./api-reference.mdx)** for the things you can do with the Paper API.
 
 ## Document content serialization
 

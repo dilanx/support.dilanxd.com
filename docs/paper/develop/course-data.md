@@ -5,6 +5,12 @@ pagination_next: paper/develop/api-reference
 
 # Using Course Data
 
+:::caution Full data format shift coming in v3.0
+
+In the upcoming **Paper version 3**, course data is no longer exactly structured in the way outlined on this page. It's strongly recommended that if you're planning on developing with Paper, you should wait until version 3 and its documentation is released.
+
+:::
+
 First, you'll need instructions and access to course data. Then, you can proceed.
 
 All course data is stored in a series of quite large minified JSON files. One JSON file holds the latest plan data (around 2 MB - 3 MB), and each term (quarter) available to Paper has a JSON file with the term-specific schedule data (each around 3 MB - 4 MB). While schedule data files doesn't include all of the course data like the plan data file does, schedule data files tend to be larger since they can include paragraphs of descriptions provided by instructors.
@@ -22,12 +28,12 @@ The following are the keys of the root object of the plan data file.
 - **majors** - An object where the keys are the course subject names (ex. `"COMP_SCI"`) and the values include the subject ID used by Paper serialization (ex. `"027"`) (you'll need this if reading user plan data), the full name (ex. `"Computer Science"`), and the color theme used in Paper (ex. `"blue"`).
 - **major_ids** - A object that maps subject IDs to subject names (ex. `"027"` to `"COMP_SCI"`).
 
-| Short       | Long      | Type                                      |
-| ----------- | --------- | ----------------------------------------- |
-| `courses`   | courses   | [PlanCourse](#plancourse)[]               |
-| `legacy`    | legacy    | [PlanCourse](#plancourse)[]               |
-| `majors`    | subjects  | {string _to_ [PlanSubject](#plansubject)} |
-| `major_ids` | major ids | {string _to_ string}\*                    |
+| Short       | Long      | Type                                        |
+| ----------- | --------- | ------------------------------------------- |
+| `courses`   | courses   | [PlanCourse](#plancourse)[]                 |
+| `legacy`    | legacy    | [PlanCourse](#plancourse)[]                 |
+| `majors`    | subjects  | {string _to_ [PlanSubject](#plansubject)}\* |
+| `major_ids` | major ids | {string _to_ string}\*                      |
 
 _\* This property will be removed in **Paper v3**._
 
@@ -75,26 +81,27 @@ _\* This property will be removed in **Paper v3**._
 
 ### ScheduleSection
 
-| Short | Long                    | Type                                               |
-| ----- | ----------------------- | -------------------------------------------------- |
-| `i`   | section id              | string                                             |
-| `r`   | instructors             | [SectionInstructor](#sectioninstructor)[]          |
-| `t`   | title                   | string                                             |
-| `k`   | topic                   | string                                             |
-| `u`   | subject                 | string                                             |
-| `n`   | catalog number          | string                                             |
-| `s`   | section id              | string                                             |
-| `m`   | meeting days            | ([MeetingDaysString](#meetingdaystring) \| null)[] |
-| `x`   | start time              | ([Time](#time) \| null)[]                          |
-| `y`   | end time                | ([Time](#time) \| null)[]                          |
-| `l`   | room                    | string[]                                           |
-| `d`   | start date              | string                                             |
-| `e`   | end date                | string                                             |
-| `c`   | component               | string                                             |
-| `a`   | capacity                | int                                                |
-| `q`   | enrollment requirements | string                                             |
-| `p`   | descriptions            | [SectionDescription](#sectiondescription)[]        |
-| `o`   | distribution areas      | [DistrosString](#distrosstring)                    |
+| Short | Long                     | Type                                               |
+| ----- | ------------------------ | -------------------------------------------------- |
+| `i`   | section id               | string                                             |
+| `r`   | instructors              | [SectionInstructor](#sectioninstructor)[]          |
+| `t`   | title                    | string                                             |
+| `k`   | topic                    | string                                             |
+| `u`   | subject                  | string                                             |
+| `n`   | catalog number           | string                                             |
+| `s`   | section id               | string                                             |
+| `m`   | meeting days             | ([MeetingDaysString](#meetingdaystring) \| null)[] |
+| `x`   | start time               | ([Time](#time) \| null)[]                          |
+| `y`   | end time                 | ([Time](#time) \| null)[]                          |
+| `l`   | room                     | string[]                                           |
+| `d`   | start date               | string                                             |
+| `e`   | end date                 | string                                             |
+| `c`   | component                | string                                             |
+| `a`   | capacity                 | int                                                |
+| `q`   | enrollment requirements  | string                                             |
+| `p`   | descriptions             | [SectionDescription](#sectiondescription)[]        |
+| `o`   | distribution areas       | [DistrosString](#distrosstring)                    |
+| `f`   | foundational disciplines | [DisciplinesString](#disciplinesstring)            |
 
 ### SectionInstructor
 
@@ -129,6 +136,22 @@ A `DistrosString` is a normal string where each character represents a distribut
 | 7         | Interdisciplinary Studies      |
 
 For example, the string `"14"` means both the Natural Studies and Historical Studies distribution areas are linked to the course.
+
+### DisciplinesString
+
+A `DisciplinesString` is a normal string where each character represents a foundational discipline.
+
+| Character | Distribution Area                 |
+| --------- | --------------------------------- |
+| 1         | Natural Sciences                  |
+| 2         | Empirical and Deductive Reasoning |
+| 3         | Social and Behavioral Sciences    |
+| 4         | Historical Studies                |
+| 5         | Ethical and Evaluative Thinking   |
+| 6         | Literature and Arts               |
+| 7         | Interdisciplinary                 |
+
+For example, the string `"14"` means both the Natural Studies and Historical Studies foundational disciplines are linked to the course.
 
 ### MeetingDaysString
 

@@ -1,41 +1,41 @@
 @font-face {
-  font-family: 'Nunito';
-  src: url('/static/fonts/Nunito-ExtraLight.ttf');
+  font-family: Inter;
+  src: url('/static/fonts/Inter-ExtraLight.ttf');
   font-weight: 200;
 }
 @font-face {
-  font-family: 'Nunito';
-  src: url('/static/fonts/Nunito-Light.ttf');
+  font-family: Inter;
+  src: url('/static/fonts/Inter-Light.ttf');
   font-weight: 300;
 }
 @font-face {
-  font-family: 'Nunito';
-  src: url('/static/fonts/Nunito-Regular.ttf');
+  font-family: Inter;
+  src: url('/static/fonts/Inter-Regular.ttf');
   font-weight: 400;
 }
 @font-face {
-  font-family: 'Nunito';
-  src: url('/static/fonts/Nunito-Medium.ttf');
+  font-family: Inter;
+  src: url('/static/fonts/Inter-Medium.ttf');
   font-weight: 500;
 }
 @font-face {
-  font-family: 'Nunito';
-  src: url('/static/fonts/Nunito-SemiBold.ttf');
+  font-family: Inter;
+  src: url('/static/fonts/Inter-SemiBold.ttf');
   font-weight: 600;
 }
 @font-face {
-  font-family: 'Nunito';
-  src: url('/static/fonts/Nunito-Bold.ttf');
+  font-family: Inter;
+  src: url('/static/fonts/Inter-Bold.ttf');
   font-weight: 700;
 }
 @font-face {
-  font-family: 'Nunito';
-  src: url('/static/fonts/Nunito-ExtraBold.ttf');
+  font-family: Inter;
+  src: url('/static/fonts/Inter-ExtraBold.ttf');
   font-weight: 800;
 }
 @font-face {
-  font-family: 'Nunito';
-  src: url('/static/fonts/Nunito-Black.ttf');
+  font-family: Inter;
+  src: url('/static/fonts/Inter-Black.ttf');
   font-weight: 900;
 }
 @font-face {
@@ -58,9 +58,9 @@
   --ifm-color-primary-lighter: #4a7eee;
   --ifm-color-primary-lightest: #7098f2;
 
-  --ifm-heading-font-family: 'Nunito', sans-serif;
+  --ifm-heading-font-family: Inter, sans-serif;
 
-  font-family: 'Nunito', sans-serif;
+  font-family: Inter, sans-serif;
 
   --ifm-code-font-size: 80%;
 

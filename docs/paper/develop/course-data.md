@@ -47,16 +47,18 @@ Many properties in these types will not always exist. I highly recommend null ch
 
 ### PlanCourse
 
-| Short | Long               | Type                            |
-| ----- | ------------------ | ------------------------------- |
-| `i`   | id                 | string                          |
-| `n`   | name               | string                          |
-| `u`   | units              | string                          |
-| `r`   | repeatable         | boolean                         |
-| `d`   | description        | string                          |
-| `p`   | prereqs            | string                          |
-| `s`   | distribution areas | [DistrosString](#distrosstring) |
-| `l`   | placeholder        | boolean                         |
+| Short | Long                     | Type                                    |
+| ----- | ------------------------ | --------------------------------------- |
+| `i`   | id                       | string                                  |
+| `n`   | name                     | string                                  |
+| `u`   | units                    | string                                  |
+| `r`   | repeatable               | boolean                                 |
+| `d`   | description              | string                                  |
+| `p`   | prereqs                  | string                                  |
+| `s`   | distribution areas       | [DistrosString](#distrosstring)         |
+| `f`   | foundational disciplines | [DisciplinesString](#disciplinesstring) |
+| `l`   | placeholder              | boolean                                 |
+| `t`   | terms                    | string[]                                |
 
 ### PlanSubject
 
@@ -89,7 +91,7 @@ _\* This property will be removed in **Paper v3**._
 | `k`   | topic                    | string                                             |
 | `u`   | subject                  | string                                             |
 | `n`   | catalog number           | string                                             |
-| `s`   | section id               | string                                             |
+| `s`   | section number           | string                                             |
 | `m`   | meeting days             | ([MeetingDaysString](#meetingdaystring) \| null)[] |
 | `x`   | start time               | ([Time](#time) \| null)[]                          |
 | `y`   | end time                 | ([Time](#time) \| null)[]                          |

@@ -7,6 +7,12 @@ pagination_next: paper/faq
 
 Help Center for [paper.nu](https://www.paper.nu)
 
+:::caution Paper v3 incoming
+
+While most of the core functionality of Paper remains the same as in v2, there are tons of [enhancements and changes in v3](https://github.com/dilanx/paper.nu/blob/main/CHANGELOG.md#300) that may not be documented here yet. Stay tuned!
+
+:::
+
 ## FAQ
 
 - **About**

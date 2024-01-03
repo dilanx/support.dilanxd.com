@@ -7,9 +7,11 @@ pagination_next: paper/faq
 
 Help Center for [paper.nu](https://www.paper.nu)
 
-:::caution Paper v3 incoming
+:::important Paper v3 documentation incoming
 
-While most of the core functionality of Paper remains the same as in v2, there are tons of [enhancements and changes in v3](https://github.com/dilanx/paper.nu/blob/main/CHANGELOG.md#300) that may not be documented here yet. Stay tuned!
+Paper v3 has been released! [Check out what's new on my blog.](https://dilan.blog/introducing-paper-v3/)
+
+While most of the core functionality of Paper remains the same as in v2, there are tons of enhancements and changes in v3 that may not be documented here yet. Stay tuned!
 
 :::
 

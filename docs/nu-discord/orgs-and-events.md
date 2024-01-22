@@ -9,11 +9,18 @@ While general advertising is not allowed on the server, advertising Northwestern
 
 Advertisement messages should only be sent in **#orgs-and-events**.
 
+## Who can access
+
+Only **student organization representatives** and **faculty/staff members** can send messages in **#orgs-and-events**.
+
+- The organization must be recognized by Northwestern University, thus either listed on [Wildcat Connection](https://northwestern.campuslabs.com/engage/) or affiliated with a Northwestern school or department.
+- Startups, including those affiliated with The Garage at Northwestern, and other profit-seeking organizations are not allowed to advertise.
+
 ## Getting access
 
 Only organization representatives or faculty/staff members can send messages in **#orgs-and-events**.
 
-To request access, type **`/orgrequest`** in any channel you can chat in and select the Wildbot command from the list that appears (in most cases, type `/orgrequest` and press `Enter` and it'll automatically select the command). You'll be required to enter a message that describes your org or event and what you hope to share with the community. A server administrator will review your request as soon as possible and will let you know its status via direct message.
+To request access, type **`/orgrequest`** in any channel you can chat in and select the Wildbot command from the list that appears (in most cases, type `/orgrequest` and press `Enter` and it'll automatically select the command). You'll be required to enter a message that describes your org or event and what you hope to share with the community. **This shouldn't be the message you want to send in the channel but rather a message to moderators with information about your org, your role in the org, and what kind of things you'd be advertising.** A server administrator will review your request as soon as possible and will let you know its status via direct message.
 
 **Access only needs to be requested once.** Once you have access, you're free to post in the channel as much as you'd like, provided that it's not too spammy and that it's relevant to your organization or event.
 

@@ -5,12 +5,6 @@ pagination_next: paper/develop/api-reference
 
 # Using Course Data
 
-:::caution Full data format shift coming in v3.0
-
-In the upcoming **Paper version 3**, course data is no longer exactly structured in the way outlined on this page. It's strongly recommended that if you're planning on developing with Paper, you should wait until version 3 and its documentation is released.
-
-:::
-
 First, you'll need instructions and access to course data. Then, you can proceed.
 
 All course data is stored in a series of quite large minified JSON files. One JSON file holds the latest plan data (around 2 MB - 3 MB), and each term (quarter) available to Paper has a JSON file with the term-specific schedule data (each around 3 MB - 4 MB). While schedule data files doesn't include all of the course data like the plan data file does, schedule data files tend to be larger since they can include paragraphs of descriptions provided by instructors.
@@ -25,21 +19,15 @@ The following are the keys of the root object of the plan data file.
 
 - **courses** - An array of all current courses.
 - **legacy** - An array of old courses that used to be included in the data from the registrar but no longer are. This is important in case a user has a plan that includes one of these courses back when it may have been offered.
-- **majors** - An object where the keys are the course subject names (ex. `"COMP_SCI"`) and the values include the subject ID used by Paper serialization (ex. `"027"`) (you'll need this if reading user plan data), the full name (ex. `"Computer Science"`), and the color theme used in Paper (ex. `"blue"`).
-- **major_ids** - A object that maps subject IDs to subject names (ex. `"027"` to `"COMP_SCI"`).
 
-| Short       | Long      | Type                                        |
-| ----------- | --------- | ------------------------------------------- |
-| `courses`   | courses   | [PlanCourse](#plancourse)[]                 |
-| `legacy`    | legacy    | [PlanCourse](#plancourse)[]                 |
-| `majors`    | subjects  | {string _to_ [PlanSubject](#plansubject)}\* |
-| `major_ids` | major ids | {string _to_ string}\*                      |
-
-_\* This property will be removed in **Paper v3**._
+| Short     | Long    | Type                        |
+| --------- | ------- | --------------------------- |
+| `courses` | courses | [PlanCourse](#plancourse)[] |
+| `legacy`  | legacy  | [PlanCourse](#plancourse)[] |
 
 ## Schedule data
 
-THe schedule data file consists of an array of [ScheduleCourse](#schedulecourse).
+The schedule data file consists of an array of [ScheduleCourse](#schedulecourse).
 
 ## Type Reference
 
@@ -47,81 +35,71 @@ Many properties in these types will not always exist. I highly recommend null ch
 
 ### PlanCourse
 
-| Short | Long                     | Type                                    |
-| ----- | ------------------------ | --------------------------------------- |
-| `i`   | id                       | string                                  |
-| `n`   | name                     | string                                  |
-| `u`   | units                    | string                                  |
-| `r`   | repeatable               | boolean                                 |
-| `d`   | description              | string                                  |
-| `p`   | prereqs                  | string                                  |
-| `s`   | distribution areas       | [DistrosString](#distrosstring)         |
-| `f`   | foundational disciplines | [DisciplinesString](#disciplinesstring) |
-| `l`   | placeholder              | boolean                                 |
-| `t`   | terms                    | string[]                                |
-
-### PlanSubject
-
-| Short | Long    | Type     |
-| ----- | ------- | -------- |
-| `i`   | id      | string\* |
-| `c`   | color   | string   |
-| `d`   | display | string   |
-
-_\* This property will be removed in **Paper v3**._
+| Short | Long                     | Type                                    | Description                                                   |
+| ----- | ------------------------ | --------------------------------------- | ------------------------------------------------------------- |
+| `i`   | id                       | string                                  | the subject and catalog number of the course                  |
+| `n`   | name                     | string                                  | the name of the course                                        |
+| `u`   | units                    | string                                  | the number of units the course is worth                       |
+| `r`   | repeatable               | boolean                                 | whether the course is repeatable                              |
+| `d`   | description              | string                                  | the description of the course                                 |
+| `p`   | prereqs                  | string                                  | the prerequisites of the course                               |
+| `s`   | distribution areas       | [DistrosString](#distrosstring)         | the distribution areas that the course fulfills               |
+| `f`   | foundational disciplines | [DisciplinesString](#disciplinesstring) | the foundational disciplines that the course fulfills         |
+| `l`   | placeholder              | boolean                                 | whether the course is a placeholder                           |
+| `t`   | terms                    | string[]                                | the terms IDs of when the course has been offered in the past |
 
 ### ScheduleCourse
 
-| Short | Long           | Type                                  |
-| ----- | -------------- | ------------------------------------- |
-| `i`   | course id      | string                                |
-| `c`   | school         | string                                |
-| `t`   | title          | string                                |
-| `u`   | subject        | string                                |
-| `n`   | catalog number | string                                |
-| `s`   | sections       | [ScheduleSection](#schedulesection)[] |
+| Short | Long           | Type                                  | Description                         |
+| ----- | -------------- | ------------------------------------- | ----------------------------------- |
+| `i`   | course id      | string                                | the course ID number provided by NU |
+| `c`   | school         | string                                | the school the course is in         |
+| `t`   | title          | string                                | the name of the course              |
+| `u`   | subject        | string                                | the subject of the course           |
+| `n`   | catalog number | string                                | the catalog number of the course    |
+| `s`   | sections       | [ScheduleSection](#schedulesection)[] | the sections of the course          |
 
 ### ScheduleSection
 
-| Short | Long                     | Type                                               |
-| ----- | ------------------------ | -------------------------------------------------- |
-| `i`   | section id               | string                                             |
-| `r`   | instructors              | [SectionInstructor](#sectioninstructor)[]          |
-| `t`   | title                    | string                                             |
-| `k`   | topic                    | string                                             |
-| `u`   | subject                  | string                                             |
-| `n`   | catalog number           | string                                             |
-| `s`   | section number           | string                                             |
-| `m`   | meeting days             | ([MeetingDaysString](#meetingdaystring) \| null)[] |
-| `x`   | start time               | ([Time](#time) \| null)[]                          |
-| `y`   | end time                 | ([Time](#time) \| null)[]                          |
-| `l`   | room                     | string[]                                           |
-| `d`   | start date               | string                                             |
-| `e`   | end date                 | string                                             |
-| `c`   | component                | string                                             |
-| `a`   | capacity                 | int                                                |
-| `q`   | enrollment requirements  | string                                             |
-| `p`   | descriptions             | [SectionDescription](#sectiondescription)[]        |
-| `o`   | distribution areas       | [DistrosString](#distrosstring)                    |
-| `f`   | foundational disciplines | [DisciplinesString](#disciplinesstring)            |
+| Short | Long                     | Type                                               | Description                                               |
+| ----- | ------------------------ | -------------------------------------------------- | --------------------------------------------------------- |
+| `i`   | section id               | string                                             | the course ID number provided by NU with a section number |
+| `r`   | instructors              | [SectionInstructor](#sectioninstructor)[]          | the instructors of the section                            |
+| `t`   | title                    | string                                             | the name of the course                                    |
+| `k`   | topic                    | string                                             | the topic of the section                                  |
+| `u`   | subject                  | string                                             | the subject of the course                                 |
+| `n`   | catalog number           | string                                             | the catalog number of the course                          |
+| `s`   | section number           | string                                             | the section number of the section                         |
+| `m`   | meeting days             | ([MeetingDaysString](#meetingdaystring) \| null)[] | the meeting days for each time slot of the section        |
+| `x`   | start time               | ([Time](#time) \| null)[]                          | the start time of the section                             |
+| `y`   | end time                 | ([Time](#time) \| null)[]                          | the end time of the section                               |
+| `l`   | room                     | string[]                                           | the location of the section                               |
+| `d`   | start date               | string                                             | the start date of the section                             |
+| `e`   | end date                 | string                                             | the end date of the section                               |
+| `c`   | component                | string                                             | the component of the section                              |
+| `a`   | capacity                 | int                                                | the capacity of the section                               |
+| `q`   | enrollment requirements  | string                                             | the enrollment requirements of the section                |
+| `p`   | descriptions             | [SectionDescription](#sectiondescription)[]        | the descriptions of the section                           |
+| `o`   | distribution areas       | [DistrosString](#distrosstring)                    | the distribution areas that the section fulfills          |
+| `f`   | foundational disciplines | [DisciplinesString](#disciplinesstring)            | the foundational disciplines that the section fulfills    |
 
 ### SectionInstructor
 
-| Short | Long           | Type   |
-| ----- | -------------- | ------ |
-| `n`   | name           | string |
-| `p`   | phone          | string |
-| `a`   | campus address | string |
-| `o`   | office hours   | string |
-| `b`   | bio            | string |
-| `u`   | url            | string |
+| Short | Long           | Type   | Description                          |
+| ----- | -------------- | ------ | ------------------------------------ |
+| `n`   | name           | string | the name of the instructor           |
+| `p`   | phone          | string | the phone number of the instructor   |
+| `a`   | campus address | string | the campus address of the instructor |
+| `o`   | office hours   | string | the office hours of the instructor   |
+| `b`   | bio            | string | the bio of the instructor            |
+| `u`   | url            | string | the URL of the instructor            |
 
 ### Time
 
-| Short | Long   | Type |
-| ----- | ------ | ---- |
-| `h`   | hour   | int  |
-| `m`   | minute | int  |
+| Short | Long   | Type | Description         |
+| ----- | ------ | ---- | ------------------- |
+| `h`   | hour   | int  | hour from 0 to 23   |
+| `m`   | minute | int  | minute from 0 to 59 |
 
 ### DistrosString
 

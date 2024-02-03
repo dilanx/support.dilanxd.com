@@ -13,9 +13,21 @@ There is currently no standalone conversion tool available to convert the JSON f
 
 You can see these conversions being made [here in the Paper source code](https://github.com/dilanx/paper.nu/blob/main/src/utility/DataMap.ts).
 
+## Subject data
+
+The following are the keys of the root object of the subject data.
+
+- **subjects** - A map of all subject data.
+  - key: the subject code (ex. COMP_SCI)
+  - value: information on the subject relevant to Paper
+
+| Short      | Long     | Type                                                       |
+| ---------- | -------- | ---------------------------------------------------------- |
+| `subjects` | subjects | { \[subject\]: [SubjectInformation](#subjectinformation) } |
+
 ## Plan data
 
-The following are the keys of the root object of the plan data file.
+The following are the keys of the root object of the plan data.
 
 - **courses** - An array of all current courses.
 - **legacy** - An array of old courses that used to be included in the data from the registrar but no longer are. This is important in case a user has a plan that includes one of these courses back when it may have been offered.
@@ -27,13 +39,25 @@ The following are the keys of the root object of the plan data file.
 
 ## Schedule data
 
-The schedule data file consists of an array of [ScheduleCourse](#schedulecourse).
+The schedule data consists of an array of [ScheduleCourse](#schedulecourse).
 
 ## Type Reference
 
 Many properties in these types will not always exist. I highly recommend null checking every one.
 
+### SubjectInformation
+
+_in [subject data](#subject-data)_
+
+| Short | Long      | Type                        | Description                           |
+| ----- | --------- | --------------------------- | ------------------------------------- |
+| `c`   | color     | [ColorString](#colorstring) | the color of the subject              |
+| `d`   | full name | string                      | the full name of the subject          |
+| `s`   | schools   | string[]                    | the schools the subject is offered in |
+
 ### PlanCourse
+
+_in [plan data](#plan-data)_
 
 | Short | Long                     | Type                                    | Description                                                   |
 | ----- | ------------------------ | --------------------------------------- | ------------------------------------------------------------- |
@@ -42,13 +66,15 @@ Many properties in these types will not always exist. I highly recommend null ch
 | `u`   | units                    | string                                  | the number of units the course is worth                       |
 | `r`   | repeatable               | boolean                                 | whether the course is repeatable                              |
 | `d`   | description              | string                                  | the description of the course                                 |
-| `p`   | prereqs                  | string                                  | the prerequisites of the course                               |
+| `p`   | prerequisites            | string                                  | the prerequisites of the course                               |
 | `s`   | distribution areas       | [DistrosString](#distrosstring)         | the distribution areas that the course fulfills               |
 | `f`   | foundational disciplines | [DisciplinesString](#disciplinesstring) | the foundational disciplines that the course fulfills         |
 | `l`   | placeholder              | boolean                                 | whether the course is a placeholder                           |
 | `t`   | terms                    | string[]                                | the terms IDs of when the course has been offered in the past |
 
 ### ScheduleCourse
+
+_in [schedule data](#schedule-data)_
 
 | Short | Long           | Type                                  | Description                         |
 | ----- | -------------- | ------------------------------------- | ----------------------------------- |
@@ -60,6 +86,8 @@ Many properties in these types will not always exist. I highly recommend null ch
 | `s`   | sections       | [ScheduleSection](#schedulesection)[] | the sections of the course          |
 
 ### ScheduleSection
+
+_in [ScheduleCourse](#schedulecourse)_
 
 | Short | Long                     | Type                                               | Description                                               |
 | ----- | ------------------------ | -------------------------------------------------- | --------------------------------------------------------- |
@@ -85,6 +113,8 @@ Many properties in these types will not always exist. I highly recommend null ch
 
 ### SectionInstructor
 
+_in [ScheduleSection](#schedulesection)_
+
 | Short | Long           | Type   | Description                          |
 | ----- | -------------- | ------ | ------------------------------------ |
 | `n`   | name           | string | the name of the instructor           |
@@ -96,12 +126,16 @@ Many properties in these types will not always exist. I highly recommend null ch
 
 ### Time
 
+_in [ScheduleSection](#schedulesection)_
+
 | Short | Long   | Type | Description         |
 | ----- | ------ | ---- | ------------------- |
 | `h`   | hour   | int  | hour from 0 to 23   |
 | `m`   | minute | int  | minute from 0 to 59 |
 
 ### DistrosString
+
+_in [PlanCourse](#plancourse) and [ScheduleSection](#schedulesection)_
 
 A `DistrosString` is a normal string where each character represents a distribution area.
 
@@ -119,6 +153,8 @@ For example, the string `"14"` means both the Natural Studies and Historical Stu
 
 ### DisciplinesString
 
+_in [PlanCourse](#plancourse) and [ScheduleSection](#schedulesection)_
+
 A `DisciplinesString` is a normal string where each character represents a foundational discipline.
 
 | Character | Distribution Area                 |
@@ -135,6 +171,8 @@ For example, the string `"14"` means both the Natural Studies and Historical Stu
 
 ### MeetingDaysString
 
+_in [ScheduleSection](#schedulesection)_
+
 A `MeetingDaysString` is a normal string where each character represents a day of the week.
 
 | Character | Day of the Week |
@@ -148,6 +186,8 @@ A `MeetingDaysString` is a normal string where each character represents a day o
 For example, the string `"024"` means the section includes a repeated meeting time on Monday, Wednesday, and Friday.
 
 ### SectionDescription
+
+_in [ScheduleSection](#schedulesection)_
 
 A `SectionDescription` is an array of strings (`string[]`). The first element is the description title. The second element is the description value.
 
@@ -165,3 +205,28 @@ For example, a section may have the following `SectionDescription[]` value:
   ]
 ]
 ```
+
+### ColorString
+
+_in [SubjectInformation](#subjectinformation)_
+
+A `ColorString` is a string that equals one of the following:
+
+- red
+- orange
+- amber
+- yellow
+- lime
+- green
+- emerald
+- teal
+- cyan
+- sky
+- blue
+- indigo
+- violet
+- purple
+- fuchsia
+- pink
+- rose
+- gray

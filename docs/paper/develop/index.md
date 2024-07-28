@@ -23,7 +23,7 @@ At least at the moment, Paper is a tool specific to and funded by Northwestern U
 
 ## Getting started
 
-No matter what you're using the APIs for, self registration is not currently supported. Send an email to [support@dilanxd.com](mailto:support@dilanxd.com?subject=Paper%20Developer%20API%20Request) with what you're looking to use the API for and I'll get back to you with relevant instructions.
+No matter what you're using the APIs for, self registration is not currently supported. Submit an [API Usage Request](https://forms.dilanxd.com/paper-support?t=API+Usage+Request) with what you're looking to use the API for and I'll get back to you with relevant instructions.
 
 Find relevant documentation here:
 

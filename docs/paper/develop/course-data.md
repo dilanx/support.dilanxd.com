@@ -69,6 +69,7 @@ _in [plan data](#plan-data)_
 | `p`   | prerequisites            | string                                  | the prerequisites of the course                               |
 | `s`   | distribution areas       | [DistrosString](#distrosstring)         | the distribution areas that the course fulfills               |
 | `f`   | foundational disciplines | [DisciplinesString](#disciplinesstring) | the foundational disciplines that the course fulfills         |
+| `c`   | school                   | string                                  | the school the course is in                                   |
 | `l`   | placeholder              | boolean                                 | whether the course is a placeholder                           |
 | `t`   | terms                    | string[]                                | the terms IDs of when the course has been offered in the past |
 

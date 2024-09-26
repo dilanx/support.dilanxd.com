@@ -8,4 +8,4 @@ Here, you can find a list of feature ideas submitted by users and developers. An
 
 ## List of Ideas
 
-_No ideas yet!_
+- [ ] Allow changing colors of built-in courses and sections

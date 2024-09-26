@@ -42,7 +42,7 @@ You may want to set up [ESLint](https://eslint.org/) and [Prettier](https://pret
 
 ### Ideas
 
-You can check out the [roadmap](https://github.com/dilanx/paper.nu/blob/main/README.md#roadmap) for ideas or come up with some on your own! If you want to chat with me about it, feel free to send a message to [support@dilanxd.com](mailto:support@dilanxd.com) and I'd be happy to help you out.
+You can check out the [ideas list](./ideas.md) for ideas or come up with some on your own! If you want to chat with me about it, feel free to send a message to [support@dilanxd.com](mailto:support@dilanxd.com) and I'd be happy to help you out.
 
 ### Avoid existing features
 

@@ -7,7 +7,7 @@ pagination_next: paper/develop/user-data
 
 :::note
 
-This page is intended for people that want to use Paper APIs to incorporate Paper data or user plans and schedules into their own applications. If you're looking to contribute to Paper itself, see [Contributing to Paper](../contribute.md).
+This page is intended for people that want to use Paper APIs to incorporate Paper data or user plans and schedules into their own applications. If you're looking to contribute to Paper itself, see [Contributing to Paper](../contribute/index.md).
 
 :::
 

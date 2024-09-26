@@ -21,9 +21,9 @@ The following are the keys of the root object of the subject data.
   - key: the subject code (ex. COMP_SCI)
   - value: information on the subject relevant to Paper
 
-| Short      | Long     | Type                                                       |
-| ---------- | -------- | ---------------------------------------------------------- |
-| `subjects` | subjects | { \[subject\]: [SubjectInformation](#subjectinformation) } |
+| Short      | Long     | Type                                                         |
+| ---------- | -------- | ------------------------------------------------------------ |
+| `subjects` | subjects | \{ \[subject\]: [SubjectInformation](#subjectinformation) \} |
 
 ## Plan data
 

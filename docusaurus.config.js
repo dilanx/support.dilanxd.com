@@ -2,6 +2,7 @@
 // Note: type annotations allow type checking and IDEs autocompletion
 
 const { faUsers, faCode } = require('@fortawesome/free-solid-svg-icons');
+const { themes } = require('prism-react-renderer');
 
 const title = "Dilan's Help Center";
 const tagline = 'Find answers here.';
@@ -73,7 +74,7 @@ const config = {
       ({
         docs: {
           routeBasePath: '/',
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: false,
           editUrl: 'https://github.com/dilanx/support.dilanxd.com/blob/main',
         },
         blog: false,
@@ -125,7 +126,7 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} Dilan Nair`,
       },
       prism: {
-        theme: require('prism-react-renderer/themes/github'),
+        theme: themes.github,
       },
     }),
   themes: ['@dilanx/themes/docusaurus-core'],

@@ -63,6 +63,6 @@ While most of the core functionality of Paper remains the same as in v2, there a
 
 ## Contribute
 
-- [Contributing to Paper](./contribute.md)
+- [Contributing to Paper](./contribute/index.md)
 
 ## Miscellaneous

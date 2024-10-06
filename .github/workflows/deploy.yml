@@ -4,12 +4,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - 'src/**'
-      - 'static/**'
-      - 'docusaurus.config.js'
-      - 'docs/**'
-      - '.github/**'
 
 jobs:
   deploy:

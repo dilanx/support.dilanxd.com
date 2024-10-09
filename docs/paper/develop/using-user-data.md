@@ -1,6 +1,6 @@
 ---
 pagination_prev: paper/develop/index
-pagination_next: paper/develop/course-data
+pagination_next: paper/develop/accessing-course-data
 ---
 
 # Using User Data

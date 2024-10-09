@@ -57,8 +57,9 @@ While most of the core functionality of Paper remains the same as in v2, there a
 ## Develop
 
 - [**Developing with Paper**](./develop/index.md)
-  - [Using User Data](./develop/user-data.md)
-  - [Using Course Data](./develop/course-data.md)
+  - [Using User Data](./develop/using-user-data.md)
+  - [Accessing Course Data](./develop/accessing-course-data.md)
+  - [Using Course Data](./develop/using-course-data.md)
   - [API Reference](./develop/api-reference.mdx)
 
 ## Contribute

@@ -1,11 +1,11 @@
 ---
-pagination_prev: paper/develop/user-data
+pagination_prev: paper/develop/accessing-course-data
 pagination_next: paper/develop/api-reference
 ---
 
 # Using Course Data
 
-First, you'll need instructions and access to course data. Then, you can proceed.
+First, you'll need [instructions and access to course data](./accessing-course-data.md). Then, you can proceed.
 
 All course data is stored in a series of quite large minified JSON files. One JSON file holds the latest plan data (around 2 MB - 3 MB), and each term (quarter) available to Paper has a JSON file with the term-specific schedule data (each around 3 MB - 4 MB). While schedule data files doesn't include all of the course data like the plan data file does, schedule data files tend to be larger since they can include paragraphs of descriptions provided by instructors.
 

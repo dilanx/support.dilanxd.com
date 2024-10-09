@@ -1,6 +1,6 @@
 ---
 pagination_prev: paper/index
-pagination_next: paper/develop/user-data
+pagination_next: paper/develop/using-user-data
 ---
 
 # Developing with Paper
@@ -27,6 +27,7 @@ No matter what you're using the APIs for, self registration is not currently sup
 
 Find relevant documentation here:
 
-- **[Using User Data](./user-data.md)**
-- **[Using Course Data](./course-data.md)** (type reference included)
+- **[Using User Data](./using-user-data.md)**
+- **[Accessing Course Data](./accessing-course-data.md)**
+- **[Using Course Data](./using-course-data.md)** (type reference included)
 - **[API Reference](./api-reference.mdx)** (type reference included)

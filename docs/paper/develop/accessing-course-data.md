@@ -73,6 +73,10 @@ When you're loading data, you should check timestamps in the starting API endpoi
 
 When you're approved for live data, you'll be able to fetch data from the API and the CDN from `localhost`. To use it in production, you'll need to supply your domain name to us to have it authorized.
 
+### Code Visibility
+
+Your project's source code should be publicly available on GitHub or a similar platform. You'll need to share the link with us when you start fetching data.
+
 ### Attribution
 
 Since you're using live data made available automatically by the Paper Data System, you should attribute the data to Paper! This does not need to be done front and center, but should be accessible by users of your application. If you have an "about" section somewhere where you include your own attribution, you can include this there as well.
